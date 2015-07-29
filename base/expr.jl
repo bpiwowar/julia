@@ -80,6 +80,13 @@ end
 _noinline(ex::Expr) = pushmeta!(ex, :noinline)
 _noinline(arg) = arg
 
+macro leaftype(ex)
+    esc(_leaftype(ex))
+end
+
+_leaftype(ex::Expr) = pushmeta!(ex, :leaftype)
+_leaftype(arg) = arg
+
 ## some macro utilities ##
 
 find_vars(e) = find_vars(e, [])

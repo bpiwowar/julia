@@ -1413,6 +1413,7 @@ export
     @simd,
     @inline,
     @noinline,
+    @leaftype,
 
     @assert,
     @enum,
